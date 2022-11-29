@@ -1,0 +1,330 @@
+/* Start Variables */
+:root {
+    --mainColor: #fff;
+    --SecondColor: #000;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* End Global Rules */
+/* Start Header */
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../imgs/header.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+header .socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+}
+header .socials a {
+    transition: 0.8s;
+}
+header .socials a:hover svg{
+    width: 3rem;
+}
+header .socials a svg {
+    color: var(--mainColor);
+    background-color: var(--SecondColor);
+    width: 1rem;
+    height: 1rem;
+    padding: 0.5rem;
+    transition: 0.8s;
+}
+header .banner {
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--mainColor);
+}
+header .banner img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: 2px solid #00bcd4;
+}
+header .banner p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+header .scroll-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    cursor: pointer;
+}
+header .scroll-btn .scroll-bar {
+    width: 1rem;
+    height: 2rem;
+    border-radius: 30rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+header .scroll-btn .scroll-bar span {
+    display: block;
+    width: 0.1rem;
+    height: 0.8rem;
+    background-color: var(--mainColor);
+    margin: 0.8rem auto;
+    animation: move 2s linear infinite;
+}
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.6rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* End Header */
+/* Start Navbar Section */
+.navigation {
+    padding-bottom: 3rem;
+}
+/* .navigation {
+    top: 0;
+    position: sticky;
+    z-index: 4;
+} */
+.navigation .navbar {
+    background-color: var(--SecondColor);
+    padding: 0.375rem 0.5rem;
+}
+.navigation .navbar .navbar-brand img {
+    width: 6rem;
+}
+.navigation .navbar .navbar-nav .nav-link {
+    color: var(--mainColor);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.navbar-toggler {
+    border: none;
+    border-radius: 0rem;
+}
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+.fa-bars {
+    font-size: 1.5rem;
+    color: var(--mainColor);
+}
+@media(max-width: 991px) {
+    .navbar-nav {
+        text-align: right;
+    }
+}
+.about .navy {
+    width: 20rem;
+    height: 25rem;
+    margin: 2rem auto;
+}
+.about .content {
+    margin: 2rem auto;
+}
+.about .content h4 {
+    text-transform: uppercase;
+}
+.about .content small {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.about .content .progress-group span {
+    font-size: 0.9rem;
+}
+.about .content .progress-group .progress {
+    margin-bottom: 0.5rem;
+}
+.about .content .progress-group .progress .progress-bar {
+    border-radius: 0.375rem;
+    background-color: var(--SecondColor);
+}
+/* End Navbar Section */
+/* Start Experience Section */
+.jobs {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #eee;
+}
+.jobs .experiences h4 {
+    margin: 1rem auto 2rem;
+}
+.jobs .experiences .exper-cont .box {
+    width: 30rem;
+    margin: 1rem auto;
+    position: relative;
+}
+@media(max-width: 767px) {
+    .jobs .experiences .exper-cont .box {
+        width: 20rem;
+    }
+}
+.jobs .experiences .exper-cont {
+    position: relative;
+}
+.jobs .experiences .exper-cont::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 0.1rem;
+    height: 100%;
+    left: 1rem;
+    z-index: 1;
+    background-color: #555;
+}
+.jobs .experiences .exper-cont .box::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    border: 2px solid var(--SecondColor);
+    left: -1.5rem;
+    z-index: 1;
+}
+.jobs .experiences .exper-cont .box .top {
+    width: 100%;
+    background-color: var(--SecondColor);
+    padding: 0rem 1rem;
+    color: var(--mainColor);
+}
+.jobs .experiences .exper-cont .box .text{
+    padding: 0rem 1rem 0.5rem;
+    margin-top: -1rem;
+    background-color: var(--mainColor);
+}
+.jobs .experiences .exper-cont .box .text p {
+    font-size: 0.9rem;
+}
+.jobs .experiences .exper-cont .box .text h5 {
+    margin-top: -1rem;
+    margin-bottom: 1.1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.jobs .experiences .exper-cont .box .text h5 span {
+    font-weight: normal;
+}
+/* End Experience Section */
+/* Start Services Section */
+.services {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.services .title,
+.contact-us .title {
+    width: 21rem;
+    margin: 1rem auto 2rem;
+}
+.services .title h2,
+.contact-us .title h2 {
+    font-size: 1.7rem;
+} 
+.services .title p,
+.contact-us .title p {
+    color: #777;
+}
+.services .box {
+    background-color: #eee;
+    padding: 1rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    margin: 1rem 0rem;
+    cursor: pointer;
+}
+.services .box:hover {
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    background-color: var(--SecondColor);
+    color: var(--mainColor);
+    transition: 0.8s;
+}
+.services .box svg {
+    color: #777;
+    margin-right: 0.5rem;
+    transition: 0.8s;
+}
+.services .box:hover svg {
+    color: var(--mainColor);
+}
+.services .box span {
+    font-weight: bold;
+}
+.services .box p {
+    margin-top: 0.5rem;
+    color: #777;
+}
+/* End Services Section */
+/* Start Footer */
+.contact-us {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../imgs/google-map.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-top: 3rem;
+}
+.contact-us .title {
+    color: var(--mainColor);
+}
+.contact-us .title p {
+    color: var(--mainColor);
+}
+.contact-us .follow {
+    color: var(--mainColor);
+    margin: 0.5rem 0rem;
+}
+.contact-us .follow svg {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+.contact-us .button {
+    width: 15rem;
+    margin: 0.5rem auto;
+}
+.contact-us .btn {
+    color: var(--mainColor);
+    margin: 2rem 0.25rem;
+}
+.contact-us .button a {
+    border: 1px solid var(--mainColor);
+    background-color: transparent;
+    transition: 0.5s;
+}
+.contact-us .button a:hover {
+    border: 1px solid var(--SecondColor);
+    background-color: var(--SecondColor);
+}
+.contact-us .foot {
+    color: var(--mainColor);
+    background-color: var(--SecondColor);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.contact-us .foot svg {
+    color: red;
+}
+/* End Footer */
